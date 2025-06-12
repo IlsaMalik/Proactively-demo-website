@@ -1,0 +1,151 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #5DADE2;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+
+    &-list {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    &-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #5DADE2;
+      }
+    }
+  }
+
+  &__auth {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #5DADE2;
+      }
+    }
+
+    &-separator {
+      color: #ccc;
+    }
+  }
+
+  &__mobile-toggle {
+    display: block;
+    background: none;
+    color: #333;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &--open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__mobile-nav {
+    padding: 20px;
+
+    &-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &-link {
+      display: block;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #5DADE2;
+      }
+    }
+  }
+
+  &__mobile-auth {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+
+    &-link {
+      font-size: 16px;
+      font-weight: 500;
+      color: #5DADE2;
+    }
+  }
+}
